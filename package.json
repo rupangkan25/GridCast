@@ -2,7 +2,7 @@
   "name": "gridcast-dashboard",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://your-username.github.io/gridcast-dashboard",
+  "homepage": "https://rupangkan25.github.io/GridCast",
   "type": "module",
   "scripts": {
     "dev": "vite",
