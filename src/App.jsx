@@ -70,19 +70,19 @@ export default function App() {
               value={district}
               onChange={setDistrict}
             />
-            <label className="flex flex-col gap-2 text-sm font-medium text-slate-600">
+            <label className="flex min-w-0 flex-col gap-2 text-sm font-medium text-slate-600">
               Date
               <input
-                className="rounded-md border border-slate-300 bg-white px-3 py-2 text-slate-900 outline-none transition hover:bg-blue-50 focus:border-gridBlue focus:ring-2 focus:ring-blue-100"
+                className="w-full min-w-0 rounded-md border border-slate-300 bg-white px-3 py-2 text-slate-900 outline-none transition hover:bg-blue-50 focus:border-gridBlue focus:ring-2 focus:ring-blue-100"
                 type="date"
                 value={selectedDate}
                 onChange={(event) => setSelectedDate(event.target.value)}
               />
             </label>
-            <label className="flex flex-col gap-2 text-sm font-medium text-slate-600">
+            <label className="flex min-w-0 flex-col gap-2 text-sm font-medium text-slate-600">
               Time of Day
               <select
-                className="rounded-md border border-slate-300 bg-white px-3 py-2 text-slate-900 outline-none transition hover:bg-blue-50 focus:border-gridBlue focus:ring-2 focus:ring-blue-100"
+                className="w-full min-w-0 rounded-md border border-slate-300 bg-white px-3 py-2 text-slate-900 outline-none transition hover:bg-blue-50 focus:border-gridBlue focus:ring-2 focus:ring-blue-100"
                 value={selectedHour}
                 onChange={(event) => setSelectedHour(Number(event.target.value))}
               >
@@ -121,7 +121,7 @@ export default function App() {
         </section>
 
         <section className="grid gap-6 xl:grid-cols-[1.65fr_1fr]">
-          <div className="rounded-lg border border-slate-200 bg-white p-4 shadow-soft">
+          <div className="min-w-0 rounded-lg border border-slate-200 bg-white p-4 shadow-soft">
             <div className="mb-4 flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
               <div>
                 <h2 className="text-lg font-semibold text-slate-900">

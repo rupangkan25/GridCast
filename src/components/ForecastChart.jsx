@@ -23,7 +23,7 @@ function getScenarioStroke(key, activeScenario) {
 
 export default function ForecastChart({ data, activeScenario = "p50" }) {
   return (
-    <div className="h-80 w-full">
+    <div className="h-72 w-full min-w-0 overflow-hidden sm:h-80">
       <ResponsiveContainer width="100%" height="100%">
         <ComposedChart data={data} margin={{ top: 12, right: 16, bottom: 8, left: 0 }}>
           <CartesianGrid stroke="#E2E8F0" strokeDasharray="3 3" />
@@ -36,7 +36,7 @@ export default function ForecastChart({ data, activeScenario = "p50" }) {
             tick={{ fill: "#475569", fontSize: 12 }}
             tickLine={false}
             unit=" MW"
-            width={72}
+            width={58}
           />
           <Tooltip
             contentStyle={{
@@ -61,6 +61,7 @@ export default function ForecastChart({ data, activeScenario = "p50" }) {
             fillOpacity={0.12}
             stroke="none"
             activeDot={false}
+            isAnimationActive={false}
           />
           <Line
             type="monotone"
@@ -70,6 +71,7 @@ export default function ForecastChart({ data, activeScenario = "p50" }) {
             strokeDasharray={lineStyle.p10.dash}
             strokeWidth={activeScenario === "p10" ? 4 : 2}
             dot={false}
+            isAnimationActive={false}
           />
           <Line
             type="monotone"
@@ -78,6 +80,7 @@ export default function ForecastChart({ data, activeScenario = "p50" }) {
             stroke={getScenarioStroke("p50", activeScenario)}
             strokeWidth={activeScenario === "p50" ? 4 : 2.5}
             dot={false}
+            isAnimationActive={false}
           />
           <Line
             type="monotone"
@@ -87,6 +90,7 @@ export default function ForecastChart({ data, activeScenario = "p50" }) {
             strokeDasharray={lineStyle.p90.dash}
             strokeWidth={activeScenario === "p90" ? 4 : 2}
             dot={false}
+            isAnimationActive={false}
           />
         </ComposedChart>
       </ResponsiveContainer>
